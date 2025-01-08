@@ -67,4 +67,11 @@ echo "Gateway: $GATEWAYIP"
 echo "Netmask: $NETMASK"
 echo "DD: $dd"
 
-# wget --no-check-certificate -qO InstallNET.sh 'http://54.169.90.181:9999/InstallNET.sh' && bash InstallNET.sh --ip-addr $MAINIP --ip-gate  $GATEWAYIP --ip-mask $NETMASK  -dd $dd
+# 如果没有 --dd 参数，提示输入并退出
+if [[ -z "$dd" ]]; then
+  echo "错误: 缺少dd 参数 --dd"
+  echo "例如: bash $0 --dd 'https://oss.sunpma.com/Windows/Win_Server2022_64_Administrator_nat.ee.gz'"
+  exit 1
+fi
+
+wget --no-check-certificate -qO InstallNET.sh 'https://raw.githubusercontent.com/frankkeres/ddwindows/refs/heads/main/InstallNET.sh' && bash InstallNET.sh --ip-addr $MAINIP --ip-gate  $GATEWAYIP --ip-mask $NETMASK  -dd $dd
