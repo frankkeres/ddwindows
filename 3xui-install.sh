@@ -76,7 +76,6 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-GetIp
 echo "config_webBasePath: $config_webBasePath"
 echo "config_account: $config_account"
 echo "config_password: $config_password"
