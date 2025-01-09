@@ -82,24 +82,24 @@ echo "config_account: $config_account"
 echo "config_password: $config_password"
 echo "config_port: $config_port"
 
-# 如果没有 --dd 参数，提示输入并退出
+# 如果没有 --dd parameter，提示输入并退出
 if [[ -z "$config_webBasePath" ]]; then
-  echo "错误: 缺少 config_webBasePath 参数 --config_webBasePath"
+  echo "error: require config_webBasePath parameter --config_webBasePath"
   exit 1
 fi
 
 if [[ -z "$config_account" ]]; then
-  echo "错误: 缺少 config_account 参数 --config_account"
+  echo "error: require config_account parameter --config_account"
   exit 1
 fi
 
 if [[ -z "$config_password" ]]; then
-  echo "错误: 缺少 config_password 参数 --config_password"
+  echo "error: require config_password parameter --config_password"
   exit 1
 fi
 
 if [[ -z "$config_port" ]]; then
-  echo "错误: 缺少 config_port 参数 --config_port"
+  echo "error: require config_port parameter --config_port"
   exit 1
 fi
 
