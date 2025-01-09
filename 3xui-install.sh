@@ -213,7 +213,7 @@ config_after_install() {
 
     if [[ "${config_confirm}" == "y" || "${config_confirm}" == "Y" ]]; then
 
-        read -p "Please set up the panel port: " config_port
+        # read -p "Please set up the panel port: " config_port
         echo -e "${yellow}Your Panel Port is: ${config_port}${plain}"
 
         echo -e "${yellow}Your Username will be generated randomly: ${config_account}${plain}"
