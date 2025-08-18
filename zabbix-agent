@@ -39,7 +39,7 @@ echo "DISTRO=$DISTRO"
 echo "VERSION=$VER"
 
 # ---------- 1. 安装官方仓库 ----------
-DEB_URL="https://repo.zabbix.com/zabbix/6.0/$DISTRO/pool/main/z/zabbix-release/zabbix-release_latest_6.0+$DISTRO$VER_all.deb"
+DEB_URL="https://repo.zabbix.com/zabbix/6.0/${DISTRO}/pool/main/z/zabbix-release/zabbix-release_latest_6.0+${DISTRO}${VER}_all.deb"
 wget -q "$DEB_URL" -O /tmp/zabbix-release.deb
 sudo dpkg -i /tmp/zabbix-release.deb
 sudo apt update
